@@ -1,12 +1,12 @@
 " Guard
-if exists('g:colors_name') && g:colors_name != "zwerihander"
+if exists('g:colors_name') && g:colors_name != "zweihander"
   finish
 endif
 
-if exists('g:loaded_zwerihander')
+if exists('g:loaded_zweihander')
   finish
 endif
-let g:loaded_zwerihander=1
+let g:loaded_zweihander=1
 
 " Required as colors will come from terminal without
 if !exists('g:fzf_colors')
@@ -28,16 +28,16 @@ endif
 
 function s:HandleInactiveBackground()
   " NeoVim has support for changing background colour depending on active or not
-  if !exists('g:zwerihander_inactive')
-    let g:zwerihander_inactive=0
+  if !exists('g:zweihander_inactive')
+    let g:zweihander_inactive=0
   endif
 
   " Put in a background colour for gui
-  if !exists('g:zwerihander_background')
-    let g:zwerihander_background=1
+  if !exists('g:zweihander_background')
+    let g:zweihander_background=1
   endif
 
-  if !has("gui_running") || g:zwerihander_background == 0
+  if !has("gui_running") || g:zweihander_background == 0
     hi NonText guifg=#36363a ctermfg=237 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
     hi Normal guifg=#b4b4b9 ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   else
@@ -45,7 +45,7 @@ function s:HandleInactiveBackground()
     hi Normal guifg=#b4b4b9 ctermfg=249 guibg=#020221 ctermbg=0 gui=NONE cterm=NONE
   endif
 
-  if exists('+winhighlight') && g:zwerihander_inactive == 1
+  if exists('+winhighlight') && g:zweihander_inactive == 1
     hi ActiveWindow guibg=NONE
     hi InactiveWindow guibg=#151521
 
@@ -54,7 +54,7 @@ function s:HandleInactiveBackground()
     return
   endif
 
-  if g:zwerihander_background == 1
+  if g:zweihander_background == 1
     hi ActiveWindow guibg=#020221
     hi InactiveWindow guibg=#151521
   else
@@ -65,11 +65,11 @@ endfunction
 
 function s:SetColors()
   " Guard
-  if !exists('g:colors_name') || !exists('g:loaded_zwerihander')
+  if !exists('g:colors_name') || !exists('g:loaded_zweihander')
     return
   endif
 
-  if g:colors_name != "zwerihander"
+  if g:colors_name != "zweihander"
     return
   endif
 
