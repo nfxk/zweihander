@@ -1,12 +1,12 @@
 " Guard
-if exists('g:colors_name') && g:colors_name != "falcon"
+if exists('g:colors_name') && g:colors_name != "zwerihander"
   finish
 endif
 
-if exists('g:loaded_falcon')
+if exists('g:loaded_zwerihander')
   finish
 endif
-let g:loaded_falcon=1
+let g:loaded_zwerihander=1
 
 " Required as colors will come from terminal without
 if !exists('g:fzf_colors')
@@ -28,16 +28,16 @@ endif
 
 function s:HandleInactiveBackground()
   " NeoVim has support for changing background colour depending on active or not
-  if !exists('g:falcon_inactive')
-    let g:falcon_inactive=0
+  if !exists('g:zwerihander_inactive')
+    let g:zwerihander_inactive=0
   endif
 
   " Put in a background colour for gui
-  if !exists('g:falcon_background')
-    let g:falcon_background=1
+  if !exists('g:zwerihander_background')
+    let g:zwerihander_background=1
   endif
 
-  if !has("gui_running") || g:falcon_background == 0
+  if !has("gui_running") || g:zwerihander_background == 0
     hi NonText guifg=#36363a ctermfg=237 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
     hi Normal guifg=#b4b4b9 ctermfg=249 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
   else
@@ -45,7 +45,7 @@ function s:HandleInactiveBackground()
     hi Normal guifg=#b4b4b9 ctermfg=249 guibg=#020221 ctermbg=0 gui=NONE cterm=NONE
   endif
 
-  if exists('+winhighlight') && g:falcon_inactive == 1
+  if exists('+winhighlight') && g:zwerihander_inactive == 1
     hi ActiveWindow guibg=NONE
     hi InactiveWindow guibg=#151521
 
@@ -54,7 +54,7 @@ function s:HandleInactiveBackground()
     return
   endif
 
-  if g:falcon_background == 1
+  if g:zwerihander_background == 1
     hi ActiveWindow guibg=#020221
     hi InactiveWindow guibg=#151521
   else
@@ -65,11 +65,11 @@ endfunction
 
 function s:SetColors()
   " Guard
-  if !exists('g:colors_name') || !exists('g:loaded_falcon')
+  if !exists('g:colors_name') || !exists('g:loaded_zwerihander')
     return
   endif
 
-  if g:colors_name != "falcon"
+  if g:colors_name != "zwerihander"
     return
   endif
 

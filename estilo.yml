@@ -1,18 +1,18 @@
-name: 'Falcon'
-version: '0.0.8'
-license: 'MIT'
-author: 'Michael Welford'
-url: 'https://github.com/fenetikm/falcon'
-description: 'A dark, easy on the eyes, fiery gray bluish kinda colour scheme'
+name: "zweihander"
+version: "0.0.8"
+license: "MIT"
+author: "Michael Welford"
+url: "https://github.com/fenetikm/zweihander"
+description: "A dark, easy on the eyes, fiery gray bluish kinda colour scheme"
 colorschemes:
-  - name: falcon
+  - name: zweihander
     background: dark
-    palette: falcon
+    palette: zweihander
 lightline:
-  - name: falcon
-    palette: falcon
-    style: falcon
+  - name: zweihander
+    palette: zweihander
+    style: zweihander
 airline:
-  - name: falcon
-    palette: falcon
-    style: falcon
+  - name: zweihander
+    palette: zweihander
+    style: zweihander
